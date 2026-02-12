@@ -1,5 +1,5 @@
 # reactInertiaLaravelDemo
-A tutorial on the setting up for a React frontend and Laravel backend application, with an Inertia.js as middleman, using PostgreSQL as RDBMS for my Cloud Computing groupmates.
+A tutorial on the setting up for a React frontend and Laravel backend application, with an Inertia.js as middleman, using local PostgreSQL as RDBMS for my Cloud Computing groupmates.
 
 ## Setting up
 
@@ -53,6 +53,20 @@ When asked for Breeze stack, select React with Inertia by entering 'react', and 
 Again, enter '1' for testing framework.
 
 
+## Installing PostgreSQL with pgAdmin 4 and making a database
+
+Install PostgreSQL locally and ensure the pgAdmin 4 checkbox is checked for installation too:
+<a>https://www.enterprisedb.com/postgresql-tutorial-resources-training-1?uuid=867f9c7f-7be7-44ed-b03f-103a0a430d51&campaignId=postgres_rc_18</a>
+
+Set the password for PostgreSQL and open pgAdmin4.
+
+Expand the 'Servers' menu and select the PostgreSQL menu inside.
+
+With PostgreSQL selected, open the 'Object' dropdown menu and create a database.
+
+Call the database 'cloud_computing', leave the owner as 'postgres' and save.
+
+
 ## Configuring the database (a continuation from this repo's current code and file structure)
 
 You will currently have a file in the application's root folder called '.env.example'.
@@ -63,9 +77,9 @@ Open the .env file and change the following fields to the values according to yo
 
 ```
 DB_CONNECTION=pgsql
-DB_HOST=<your_database_IP_address>
+DB_HOST=127.0.0.1
 DB_PORT=5432
-DB_DATABASE=postgres
+DB_DATABASE=cloud_computing # call your database this!!!!
 DB_USERNAME=postgres
 DB_PASSWORD=<your_database_password>
 ```
