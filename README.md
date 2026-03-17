@@ -23,7 +23,7 @@ For Linux:
 
 ## Create an application
 
-Run the command:
+In Vscode, open a terminal and run the command:
 ```
 laravel new app-name
 ```
